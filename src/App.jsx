@@ -14,7 +14,11 @@ function App() {
       <h1>
         <span>emojipedia</span>
       </h1>
-
+      <d1 className = "dictionary">
+        <Entry/>
+        <Entry/>
+        <Entry/>
+      </d1>
 
       
     </div>
