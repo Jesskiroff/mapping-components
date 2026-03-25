@@ -5,8 +5,18 @@ import heroImg from './assets/hero.png'
 // import './App.css'
 import './Entry.css'
 import Entry from './Entry'
-
+import emojipedia from '../emojipedia'
 import React from "react";
+
+
+function createEntry(emojiTerm){
+  return <Entry
+  key= {emojiTerm.id}
+  emoji = {emojiTerm.emoji}
+  name ={emojiTerm.name}
+  description ={emojiTerm.meaning}
+  />
+}
 
 function App() {
   return (
@@ -15,13 +25,7 @@ function App() {
         <span>emojipedia</span>
       </h1>
       <dl className = "dictionary">
-        <Entry
-        emoji = "💪"
-        name = "Tense Biceps"
-        description = "“You can do that!” or “I feel strong!” Arm with tense biceps. Also used in connection with doing sports, e.g. at the gym."
-        />
-        {/* <Entry/>
-        <Entry/> */}
+        {emojipedia.map(createEntry)}
       </dl>
 
       
